@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <!--First test-->
+    <test name="annotationdemo">
+        <classes>
+            <class name="TC1">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                </methods>
+            </class>
+
+            <class name="TC2">
+                <methods>
+                    <include name="test3"/>
+                    <include name="test4"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="groupingtest">
+        <groups>
+            <run>
+                <include name="sanity"/>
+                <exclude name="regression"/>
+                <include name="performance"/>
+            </run>
+
+        </groups>
+        <classes>
+    <class name="GroupingExample"/>
+        </classes>
+    </test>
+
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+    <test name = "parameterstest1">
+        <classes>
+        <class name="ParametersExample"/>
+        </classes>
+
+    </test>
+
+    <!--<parameter name="browser" value="firefox"/>-->
+    <!--<parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>-->
+    <!--<test name = "parameterstest2">-->
+        <!--<classes>-->
+            <!--<class name="ParametersExample"/>-->
+        <!--</classes>-->
+
+    <!--</test>-->
+
+    <test name=""
+</suite> <!--Suite-->
